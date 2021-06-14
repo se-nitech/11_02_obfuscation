@@ -4,3 +4,4 @@ services:
     volumes:
       - ../:/mnt
     tty: true
+    working_dir: /mnt/11_02_obfuscation
