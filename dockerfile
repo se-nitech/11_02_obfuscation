@@ -1,11 +1,14 @@
 FROM python:slim
 
-RUN pip install setuptools==57.5.0
-RUN pip install pyminifier
-RUN pip install -U setuptools
+RUN apt -y update && apt -y install git
+RUN pip install pylint flake8 bandit
+RUN pip install pytest coverage
 
-RUN pip install setuptools pylint flake8 autopep8 pyarmor python-obfuscator \
-    && apt -y update \
-    && apt -y install git
+RUN pip install autopep8 black yapf pycodestyle flawfinder lizard
+
+RUN pip install pyarmor python-obfuscator
+
+RUN pip install setuptools==57.5.0 \
+    && pip install pyminifier
 
 WORKDIR /mnt

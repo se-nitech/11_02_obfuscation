@@ -1,5 +1,32 @@
 {
     "python.defaultInterpreterPath": "/usr/local/bin/python",
-    "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.pycodestyleEnabled": false,
+    "python.linting.lintOnSave": true,
+    "editor.rulers": [
+        80,
+    ],
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    // "python.formatting.provider": "autopep8",
+    "python.formatting.provider": "black",
+    // "python.formatting.provider": "yapf",
+    "python.formatting.autopep8Args": [
+        "-a",
+        "-a",
+        "--max-line-length",
+        "120",
+    ],
+    "python.formatting.yapfArgs": [
+        "--style",
+        "{based_on_style: pep8, column_limit: 120}"
+    ],
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],
 }
