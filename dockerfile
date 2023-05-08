@@ -4,7 +4,7 @@ RUN apt -y update && apt -y install git
 RUN pip install pylint flake8 bandit
 RUN pip install pytest coverage
 
-RUN pip install autopep8 black yapf pycodestyle flawfinder lizard
+RUN pip install autopep8 black yapf pycodestyle pydocstyle
 
 RUN pip install pyarmor python-obfuscator
 
