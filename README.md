@@ -10,7 +10,7 @@ docker-compose up -d
 pyminifierで難読化
 
 ```bash
-docker-compose exec mypython pyminifier --obfuscate-builtins --obfuscate main.py
+docker-compose exec mypython pyminifier --obfuscate-builtins --obfuscate main.py > main.mini.py
 ```
 
 pyobfuscateで難読化
@@ -22,7 +22,7 @@ docker-compose exec mypython pyobfuscate -i main.py > main.obs.py
 pyarmorで難読化
 
 ```bash
-docker-compose exec mypython pyarmor obfuscate main.py
+docker-compose exec mypython pyarmor gen main.py
 ```
 
 
