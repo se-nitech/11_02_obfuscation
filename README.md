@@ -7,10 +7,10 @@ docker-compose build
 docker-compose up -d
 ```
 
-pyminifierで難読化
+python-minifierで難読化
 
 ```bash
-docker-compose exec mypython pyminifier --obfuscate-builtins --obfuscate main.py > main.mini.py
+docker-compose exec mypython pyminify main.py > main.mini.py
 ```
 
 pyobfuscateで難読化
@@ -24,7 +24,6 @@ pyarmorで難読化
 ```bash
 docker-compose exec mypython pyarmor gen main.py
 ```
-
 
 停止
 

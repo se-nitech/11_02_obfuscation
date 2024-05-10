@@ -1,7 +1,7 @@
 
 
 def myfunc(x, y):
-    z = 2*x - y
+    z = 2 * x - y
     return z
 
 
